@@ -12,7 +12,7 @@ resources:
     configuration:
       registry: demo_artifactory                                # <-- replace with your artifactory integration
       sourceRepository: demo-docker               # <-- required if registry is Artifactory
-      imageName: saikiranchalla1/demo-docker/dbp  # < -- replace with your image path and name
+      imageName: skctraining.jfrog.io/demo-docker/dbp  # < -- replace with your image path and name, 
       imageTag: latest
       autoPull: true
       
@@ -40,7 +40,7 @@ pipelines:
           affinityGroup: dbp_group
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: saikiranchalla1/demo-docker/dbp  # replace with your image path and name
+          dockerImageName: skctraining.jfrog.io/demo-docker/dbp  # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
             - name: dbp_repo
